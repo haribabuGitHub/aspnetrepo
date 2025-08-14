@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ZurisCloudApp/.vs/zurissample
+/ZurisCloudApp/packages/Microsoft.Web.WebJobs.Publish.17.1.361/build
+*.p7s
+/ZurisCloudApp/TestWebJob/bin/Debug/net48
+/ZurisCloudApp/TestWebJob/obj
+/ZurisCloudApp/WebJob/obj/Debug
+/ZurisCloudApp/zurissample/obj
+/.vs
