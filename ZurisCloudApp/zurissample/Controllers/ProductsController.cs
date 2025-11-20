@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using zurissample.Models;
 
 namespace zurissample.Controllers
 {
@@ -15,7 +15,15 @@ namespace zurissample.Controllers
         // GET: /Products
         public IActionResult Index()
         {
-            return View();
+            // Return a static list of products as the model for the view
+            var products = new List<Product>
+            {
+                new Product { Id = 1, Name = "Product 1", Price = 9.99m },
+                new Product { Id = 2, Name = "Product 2", Price = 19.99m },
+                new Product { Id = 3, Name = "Product 3", Price = 29.99m }
+            };
+
+            return View(products);
         }
 
         // GET: /Products/Details/5

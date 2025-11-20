@@ -1,12 +1,17 @@
+@model IEnumerable<zurissample.Models.Product>
+
 @{
     ViewData["Title"] = "Products";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<p>This is the products index.</p>
-
 <ul>
-    <li><a asp-controller="Products" asp-action="Details" asp-route-id="1">Product 1</a></li>
-    <li><a asp-controller="Products" asp-action="Details" asp-route-id="2">Product 2</a></li>
+@foreach(var p in Model)
+{
+    <li>
+        <a asp-controller="Products" asp-action="Details" asp-route-id="@p.Id">@p.Name</a>
+        - @p.Price:C
+    </li>
+}
 </ul>
