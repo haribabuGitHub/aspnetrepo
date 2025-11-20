@@ -9,9 +9,6 @@
 <ul>
 @foreach(var p in Model)
 {
-    <li>
-        <a asp-controller="Products" asp-action="Details" asp-route-id="@p.Id">@p.Name</a>
-        - @p.Price:C
-    </li>
+    @await Html.PartialAsync("_ProductRow", new { Id = p.Id, Name = p.Name })
 }
-</ul>
+</ul>                       

@@ -1,0 +1,8 @@
+@model dynamic
+
+<li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+    <div>
+        <a asp-controller="Products" asp-action="Details" asp-route-id="@Model.Id">@Model.Name</a>
+    </div>
+    <div class="text-muted">ID: @Model.Id</div>
+</li>
